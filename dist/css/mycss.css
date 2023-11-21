@@ -1,0 +1,19 @@
+.form-criar-usuarios{
+    margin-bottom: 100px;
+    margin-top: 80px;
+}
+
+.form-criar-usuarios div{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.form-criar-usuarios button{
+   width: 200px;
+   margin-top: 50px;
+}
+
+.create-user{
+    display: flex;
+    justify-content: end;
+}

@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="css/vendors/simplebar.css">
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/mycss.css">
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link href="css/examples.css" rel="stylesheet">
     <link href="node_modules/@coreui/chartjs/dist/css/coreui-chartjs.css" rel="stylesheet">
@@ -51,7 +52,7 @@
           <h6 style="color: orangered; font-weight: 700;">Sistema Phoenix</h6>
       </div>
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
-        <li class="nav-item"><a class="nav-link" href="index.html">
+        <li class="nav-item"><a class="nav-link" href="index.php">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-speedometer"></use>
             </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">Novo</span></a></li>
@@ -159,30 +160,33 @@
             <div class="row">
               <div>
                 <h1>Cadastrar Usuários</h1>
-                
-                <form action="criar_usuarioBD.php" class="from-criar-usuario" method="POST">
-                  <div class="form-group">
-                    <label for="nome" class="from-criar-usuario">Nome:</label>
-                    <input type="text" class="form-control" id="nome" name="nome">
-                  </div>
-                  
-                  <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" class="form-control" id="email" name="email">
-                  </div>
-          
-                  <div class="form-group">
-                    <label for="password">Senha:</label>
-                    <input type="password" class="form-control" id="password" name="password">
-                  </div>
-          
-                  <div class="form-group">
-                    <label for="city">Cidade:</label>
-                    <input type="text" class="form-control" id="city" name="city">
-                  </div>
-                  
-                  <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+                <div class="form-criar-usuarios">
+                  <form action="criar_usuarioBD.php" method="POST">
+                    <div class="form-group">
+                      <label for="nome" class="from-criar-usuario">Nome:</label>
+                      <input type="text" class="form-control" id="nome" name="nome">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="email">E-mail:</label>
+                      <input type="email" class="form-control" id="email" name="email">
+                    </div>
+            
+                    <div class="form-group">
+                      <label for="password">Senha:</label>
+                      <input type="password" class="form-control" id="password" name="password">
+                    </div>
+            
+                    <div class="form-group">
+                      <label for="city">Cidade:</label>
+                      <input type="text" class="form-control" id="city" name="city">
+                    </div>
+                    
+                    <div class="create-user">
+                      <button type="submit" class="btn btn-primary">Criar usuário</button>
+                    </div>
+                  </form>
+                </div> 
               </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Consulta SQL para obter todos os usuários
-$sql = "SELECT * FROM tabletest";
+$sql = "SELECT * FROM tabela_usuarios";
 $result = $conn->query($sql);
 
 // Verifica se a consulta foi bem-sucedida

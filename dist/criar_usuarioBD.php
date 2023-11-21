@@ -24,7 +24,7 @@ $city = $_POST['city'];
 $criacao = date('Y-m-d H:i:s'); // Formato: YYYY-MM-DD HH:MM:SS
 
 // Utilizando prepared statement para evitar SQL Injection
-$sql = "INSERT INTO tabletest (name, email, created, password, city) VALUES (?, ?, ?, ?, ?)";
+$sql = "INSERT INTO tabela_usuarios (name, email, created, password, city) VALUES (?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 

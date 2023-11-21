@@ -18,22 +18,22 @@
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>Sistema Phoenix - Gestão Objetiva</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/atomo-logo.svg">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/atomo-logo.svg">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/atomo-logo.svg">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/atomo-logo.svg">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/atomo-logo.svg">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/atomo-logo.svg">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/atomo-logo.svg">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/atomo-logo.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/atomo-logo.svg">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/atomo-logo.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/atomo-logo.svg">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/atomo-logo.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/atomo-logo.svg">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/avsys.svg">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/avsys.svg">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/avsys.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/avsys.svg">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/avsys.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/avsys.svg">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/avsys.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/avsys.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/avsys.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/avsys.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/avsys.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/avsys.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/avsys.svg">
     <link rel="manifest" href="assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="href="assets/img/atomo-logo.svg">
+    <meta name="msapplication-TileImage" href="assets/img/avsys.svg">
     <meta name="theme-color" content="#ffffff">
     <!-- Vendors styles-->
     <link rel="stylesheet" href="node_modules/simplebar/dist/simplebar.css">
@@ -47,7 +47,7 @@
   <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
       <div class="sidebar-brand d-none d-md-flex" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; margin-bottom: 2%;">
-          <img src="./assets/img/Atom.svg" style="margin-bottom: 7%;" class="sidebar-brand-full" width="118" height="46" alt="">
+          <img src="./assets/img/atomo-logo.svg" style="margin-bottom: 7%;" class="sidebar-brand-full" width="118" height="46" alt="">
           <h6 style="color: orangered; font-weight: 700;">Sistema Phoenix</h6>
       </div>
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>

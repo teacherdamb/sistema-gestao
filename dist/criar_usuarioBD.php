@@ -20,11 +20,31 @@ $email = $_POST['email'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash da senha
 $city = $_POST['city'];
 
-// Obtendo a data e hora atual
-$criacao = date('Y-m-d H:i:s'); // Formato: YYYY-MM-DD HH:MM:SS
+// Verificar se o e-mail já está cadastrado
+$checkEmailSql = "SELECT * FROM tabela_usuarios WHERE email = ?";
+$checkEmailStmt = $conn->prepare($checkEmailSql);
 
-// Utilizando prepared statement para evitar SQL Injection
-$sql = "INSERT INTO tabela_usuarios (name, email, created, password, city) VALUES (?, ?, ?, ?, ?)";
+if ($checkEmailStmt) {
+    $checkEmailStmt->bind_param("s", $email);
+    $checkEmailStmt->execute();
+    $checkEmailResult = $checkEmailStmt->get_result();
+
+    if ($checkEmailResult->num_rows > 0) {
+        // O e-mail já está cadastrado
+        echo "Erro: E-mail já cadastrado.";
+        $checkEmailStmt->close();
+        $conn->close();
+        exit;
+    }
+
+    $checkEmailStmt->close();
+} else {
+    echo "Erro na preparação da declaração: " . $conn->error;
+}
+
+// Se o e-mail não está cadastrado, prosseguir com a inserção
+$criacao = date('Y-m-d H:i:s'); // Formato: YYYY-MM-DD HH:MM:SS
+$sql = "INSERT INTO tabela_usuarios (id, name, email, created, password, city) VALUES (NULL, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 
@@ -39,7 +59,6 @@ if ($stmt) {
     }
 
     $stmt->close();
-    
 } else {
     echo "Erro na preparação da declaração: " . $conn->error;
 }

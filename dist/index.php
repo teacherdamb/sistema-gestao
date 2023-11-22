@@ -52,7 +52,7 @@
           <h6 style="color: orangered; font-weight: 700;">Sistema Phoenix</h6>
       </div>
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
-        <li class="nav-item"><a class="nav-link" href="index.html">
+        <li class="nav-item"><a class="nav-link" href="index.php">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-speedometer"></use>
             </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">Novo</span></a></li>
@@ -65,6 +65,16 @@
               <svg class="nav-icon">
                 <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
               </svg> Visualizar Usuários</a></li>
+
+        <li class="nav-title">Orçamentos</li>
+        <li class="nav-item"><a class="nav-link" href="cadastro_orçamentos.php">
+              <svg class="nav-icon">
+              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
+            </svg> Cadastrar um orçamento</a></li>
+            <li class="nav-item"><a class="nav-link" href="visualizar_usuarios.php">
+              <svg class="nav-icon">
+                <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
+              </svg> Visualizar orçamentos</a></li>
       </ul>
       <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>
@@ -151,7 +161,7 @@
             <div class="col-sm-6 col-lg-3">
               <div class="card mb-4 text-white bg-primary">
                 <div class="card-body pb-0 d-flex justify-content-between align-items-start">
-                  <?php include('dados_dashboardBD.php'); ?>
+                  <?php include('contador_usuariosCadastradosBD.php'); ?>
                 </div>
                 <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
                   <canvas class="chart" id="card-chart1" height="70"></canvas>
@@ -162,7 +172,7 @@
             <div class="col-sm-6 col-lg-3">
               <div class="card mb-4 text-white bg-info">
                 <div class="card-body pb-0 d-flex justify-content-between align-items-start">
-                <?php include('dados_dashboardBD.php'); ?>
+                <?php include('contador_emailsCadastradosBD.php'); ?>
                 </div>
                 <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
                   <canvas class="chart" id="card-chart2" height="70"></canvas>
@@ -173,7 +183,7 @@
             <div class="col-sm-6 col-lg-3">
               <div class="card mb-4 text-white bg-warning">
                 <div class="card-body pb-0 d-flex justify-content-between align-items-start">
-                <?php include('dados_dashboardBD.php'); ?>
+                <?php include('contador_usuariosCadastradosBD.php'); ?>
                 </div>
                 <div class="c-chart-wrapper mt-3" style="height:70px;">
                   <canvas class="chart" id="card-chart3" height="70"></canvas>

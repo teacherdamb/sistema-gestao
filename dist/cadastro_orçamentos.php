@@ -17,7 +17,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>Sistema Phoenix - Gestão Objetiva</title>
+    <title>Cadastrar orçamento</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/img/avsys.svg">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/img/avsys.svg">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/img/avsys.svg">
@@ -67,7 +67,7 @@
               </svg> Visualizar Usuários</a></li>
 
         <li class="nav-title">Orçamentos</li>
-        <li class="nav-item"><a class="nav-link" href="cadastro_orçamentos.php">
+        <li class="nav-item"><a class="nav-link" href="cadastro_orlamentos.php">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
             </svg> Cadastrar um orçamento</a></li>
@@ -153,29 +153,87 @@
             </li>
           </ul>
         </div>
-        <div class="header-divider"></div>
-        <div class="container-fluid">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb my-0 ms-2">
-              <li class="breadcrumb-item">
-                <!-- if breadcrumb is single--><span>Home</span>
-              </li>
-              <li class="breadcrumb-item active"><span>Dashboard</span></li>
-            </ol>
-          </nav>
-        </div>
       </header>
       <div class="body flex-grow-1 px-3">
         <div class="container-lg">
-          <div class="row">
-                <div class="col-lg-12">
-                    <!-- Seu formulário existente -->
+            <div class="row">
+              <div>
+                <h2>Cadastrar um Orçamento</h2>
+                <div class="form-criar-usuarios">
+                  <div class="container">
+                  <form action="criar_orcamentoBD.php" method="POST">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="nome" class="from-criar-usuario pb-2">Nome / Razão Social:</label>
+                                <input type="text" class="form-control" id="nome" name="nome">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="cnpj" class="pb-2">CNPJ:</label>
+                                <input type="text" class="form-control" id="cnpj" name="cnpj">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="email" class="pb-2">E-mail:</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Incluir a tabela de usuários -->
-                    <?php include('listar_usuarios.php'); ?>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="largura" class="from-criar-usuario pb-2">Largura:</label>
+                                <input type="text" class="form-control" id="largura" name="largura">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="altura" class="pb-2">Altura:</label>
+                                <input type="text" class="form-control" id="altura" name="altura">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="comprimento" class="pb-2">Comprimento:</label>
+                                <input type="text" class="form-control" id="comprimento" name="comprimento">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="material" class="from-criar-usuario pb-2">Material utilizado:</label>
+                                <input type="text" class="form-control" id="material" name="material">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="layout" class="pb-2">Fazer layout:</label>
+                                <input type="text" class="form-control" id="layout" name="layout">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="valor" class="pb-2">Valor:</label>
+                                <input type="text" class="form-control" id="valor" name="valor">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="create-user">
+                        <button type="submit" class="btn btn-primary">Criar usuário</button>
+                    </div>
+                </form>
+
+                  </div>
                 </div>
-            <!-- /.col-->
-          </div>
+                  </form>
+              </div>
         </div>
       </div>
       <footer class="footer">

@@ -65,6 +65,16 @@
               <svg class="nav-icon">
                 <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
               </svg> Visualizar Usuários</a></li>
+
+        <li class="nav-title">Orçamentos</li>
+        <li class="nav-item"><a class="nav-link" href="cadastro_orçamentos.php">
+            <svg class="nav-icon">
+              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
+            </svg> Cadastrar um orçamento</a></li>
+            <li class="nav-item"><a class="nav-link" href="visualizar_usuarios.php">
+              <svg class="nav-icon">
+                <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
+              </svg> Visualizar orçamentos</a></li>
       </ul>
       <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>

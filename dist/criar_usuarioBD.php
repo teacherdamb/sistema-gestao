@@ -19,6 +19,7 @@ $nome = $_POST['nome'];
 $email = $_POST['email'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash da senha
 $city = $_POST['city'];
+$escopo = $_POST['escopo']; // Adicionando a captura do escopo
 
 // Verificar se o e-mail já está cadastrado
 $checkEmailSql = "SELECT * FROM tabela_usuarios WHERE email = ?";
@@ -44,13 +45,13 @@ if ($checkEmailStmt) {
 
 // Se o e-mail não está cadastrado, prosseguir com a inserção
 $criacao = date('Y-m-d H:i:s'); // Formato: YYYY-MM-DD HH:MM:SS
-$sql = "INSERT INTO tabela_usuarios (id, name, email, created, password, city) VALUES (NULL, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO tabela_usuarios (id, name, email, created, password, city, escopo) VALUES (NULL, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 
 // Verificando se a preparação foi bem-sucedida
 if ($stmt) {
-    $stmt->bind_param("sssss", $nome, $email, $criacao, $password, $city);
+    $stmt->bind_param("ssssss", $nome, $email, $criacao, $password, $city, $escopo);
 
     if ($stmt->execute()) {
         echo "Dados inseridos com sucesso!";

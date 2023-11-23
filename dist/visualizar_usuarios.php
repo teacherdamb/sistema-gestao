@@ -71,7 +71,7 @@
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
             </svg> Cadastrar um orçamento</a></li>
-            <li class="nav-item"><a class="nav-link" href="visualizar_usuarios.php">
+            <li class="nav-item"><a class="nav-link" href="visualizar_orcamentos.php">
               <svg class="nav-icon">
                 <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
               </svg> Visualizar orçamentos</a></li>
@@ -172,7 +172,7 @@
                     <!-- Seu formulário existente -->
 
                     <!-- Incluir a tabela de usuários -->
-                    <?php include('listar_usuarios.php'); ?>
+                    <?php include('listar_usuariosBD.php'); ?>
                 </div>
             <!-- /.col-->
           </div>

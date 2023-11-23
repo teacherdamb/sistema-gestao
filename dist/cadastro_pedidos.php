@@ -154,7 +154,7 @@
           </ul>
         </div>
       </header>
-      <div class="body flex-grow-1 px-1">
+      <div class="body flex-grow-1 px-3">
         <div class="container-lg">
             <div class="row">
               <div>
@@ -163,85 +163,49 @@
                   <div class="container">
                   <form action="criar_orcamentoBD.php" method="POST">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="nome" class="from-criar-usuario pb-2">Nome / Razão Social:</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Digite o nome ou razão social..." name="nome">
+                                <input type="text" class="form-control" id="nome" name="nome">
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="cnpj" class="pb-2">CNPJ:</label>
-                                <input type="text" class="form-control" placeholder="Digite um CNPJ..." id="cnpj" name="cnpj">
+                                <input type="text" class="form-control" id="cnpj" name="cnpj">
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="email" class="pb-2">E-mail:</label>
-                                <input type="email" class="form-control" placeholder="Digite o e-mail..." id="email" name="email">
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="form-group">
-                                <label for="endereco" class="from-criar-usuario pb-2">Endereço:</label>
-                                <input type="text" class="form-control" id="endereco" placeholder="Rua, numero - Cidade..." name="endereco">
+                                <input type="email" class="form-control" id="email" name="email">
                             </div>
                         </div>
                     </div>
 
-
                     <div class="row">
-                        <div class="col-lg-3">
-                            <div class="form-group">
-                                <label for="bairro" class="from-criar-usuario pb-2">Bairro:</label>
-                                <input type="text" class="form-control" placeholder="Digite o bairro..." id="bairro" name="bairro">
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="form-group">
-                                <label for="cep" class="pb-2">CEP:</label>
-                                <input type="text" class="form-control" placeholder="xx.xxx-xxx" id="cep" name="cep">
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="form-group">
-                                <label for="consultor" class="pb-2">Consultor:</label>
-                                <input type="text" class="form-control" placeholder="Nome do consultor..." id="consultor" name="consultor">
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                          <div class="form-group">
-                              <label for="layout" class="pb-2">Fazer layout:</label>
-                              <select class="form-select" id="layout" name="layout"> <!-- Adicionei o atributo 'name' aqui -->
-                                  <option selected>Escolha uma opção...</option>
-                                  <option value="sim">Sim</option>
-                                  <option value="nao">Não</option>
-                              </select>
-                          </div>
-                      </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-lg-2">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="largura" class="from-criar-usuario pb-2">Largura:</label>
-                                <input type="number" class="form-control" id="largura" name="largura">
+                                <input type="text" class="form-control" id="largura" name="largura">
                             </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="altura" class="pb-2">Altura:</label>
-                                <input type="number" class="form-control" id="altura" name="altura">
+                                <input type="text" class="form-control" id="altura" name="altura">
                             </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="comprimento" class="pb-2">Comprimento:</label>
-                                <input type="number" class="form-control" id="comprimento" name="comprimento">
+                                <input type="text" class="form-control" id="comprimento" name="comprimento">
                             </div>
                         </div>
-                        <div class="col-lg-2">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="material" class="from-criar-usuario pb-2">Material utilizado:</label>
                                 <input type="text" class="form-control" id="material" name="material">
@@ -249,13 +213,20 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
+                                <label for="layout" class="pb-2">Fazer layout:</label>
+                                <input type="text" class="form-control" id="layout" name="layout">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
                                 <label for="valor" class="pb-2">Valor:</label>
-                                <input type="number" class="form-control" id="valor" name="valor">
+                                <input type="text" class="form-control" id="valor" name="valor">
                             </div>
                         </div>
                     </div>
+
                     <div class="create-user">
-                        <button type="submit" class="btn btn-success">Cadastrar orçamento</button>
+                        <button type="submit" class="btn btn-primary">Criar usuário</button>
                     </div>
                 </form>
 
@@ -278,7 +249,7 @@
     <script src="node_modules/@coreui/chartjs/dist/js/coreui-chartjs.js"></script>
     <script src="node_modules/@coreui/utils/dist/coreui-utils.js"></script>
     <script src="js/main.js"></script>
-    <script>
+    <script> 
     </script>
   </body>
 </html>

@@ -186,6 +186,15 @@
                       <label for="password">Senha:</label>
                       <input type="password" class="form-control" id="password" name="password">
                     </div>
+
+                    <div class="form-group">
+                      <label for="escopo">Escopo:</label>
+                        <select class="form-select" id="escopo" name="escopo">
+                            <option value="administrador">Administrador</option>
+                            <option value="designer">Designer</option>
+                            <option value="financeiro">Financeiro</option>
+                        </select>
+                    </div>
             
                     <div class="form-group">
                       <label for="city">Cidade:</label>

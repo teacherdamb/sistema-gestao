@@ -1,4 +1,3 @@
-<!-- listar_usuarios.php -->
 <?php
 $dbHost = 'localhost';
 $dbUsername = 'root';
@@ -33,6 +32,7 @@ if ($result) {
                 <th class="text-center">Valor Total</th>
                 <th class="text-center">Status</th> <!-- Adicionando a coluna de status -->
                 <th class="text-center">Ações</th> <!-- Adicionando a coluna de ações -->
+                <th class="text-center">Gerar PDF</th> <!-- Adicionando a coluna de gerar PDF -->
             </tr>';
 
     // Loop através dos resultados e exibição na tabela
@@ -52,6 +52,9 @@ if ($result) {
                 <td class="text-center">' . (isset($row['status']) ? $row['status'] : '') . '</td>
                 <td class="text-center">
                     <a href="liberar_orcamento.php?id=' . $row['ID'] . '">Liberar</a>
+                </td>
+                <td class="text-center">
+                    <a href="gerar_pdf.php?id=' . $row['ID'] . '">Gerar PDF</a>
                 </td>
             </tr>';
     }

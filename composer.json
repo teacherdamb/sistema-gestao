@@ -1,0 +1,12 @@
+{
+    "name": "kapforte/sistema-gestao",
+    "description": "Teste de sistema php",
+    "autoload": {
+        "psr-4": {
+            "Kapforte\\SistemaGestao\\": "src/"
+        }
+    },
+    "require": {
+        "tecnickcom/tcpdf": "^7.3"
+    }
+}

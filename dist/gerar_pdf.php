@@ -1,6 +1,5 @@
 <?php
 
-use Com\Tecnick\Pdf\Tcpdf;
 use TCPDF as GlobalTCPDF;
 
 require_once(__DIR__ . '/TCPDF/tcpdf.php');
@@ -40,13 +39,36 @@ try {
                 $pdf->AddPage();
 
                 // Adiciona conteúdo ao PDF
+
+                // Posiciona a logo no canto superior direito
+                $logoPath = __DIR__ . '/assets/img/Logo Imperio.png';
+                $pdf->Image($logoPath, $pdf->getPageWidth() - 40, 10, 30, 30);
+
                 $pdf->SetFont('times', 'B', 12);
+                $pdf->Cell(0, 10, 'Nome / Razão Social: ' . $row['nome'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'CNPJ: ' . $row['cnpj'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Email: ' . $row['email'], 0, 1, 'L');
+
+                // Adiciona linha divisória acima de "Detalhes do Orçamento"
+                $pdf->SetLineWidth(0.5);
+                $pdf->Line(10, $pdf->GetY(), $pdf->getPageWidth() - 10, $pdf->GetY());
+                
                 $pdf->Cell(0, 10, 'Detalhes do Orçamento', 0, 1, 'C');
+
 
                 $pdf->SetFont('times', '', 10);
                 $pdf->Cell(0, 10, 'ID do Orçamento: ' . $row['ID'], 0, 1, 'L');
-                $pdf->Cell(0, 10, 'Nome / Razão Social: ' . $row['nome'], 0, 1, 'L');
-                $pdf->Cell(0, 10, 'CNPJ: ' . $row['cnpj'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Largura: ' . $row['largura'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Altura: ' . $row['altura'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Comprimento: ' . $row['comprimento'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Material: ' . $row['material'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Layout: ' . $row['layout'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Valor: ' . $row['valor'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Endereço: ' . $row['endereco'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Bairro: ' . $row['bairro'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'CEP: ' . $row['cep'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Consultor: ' . $row['consultor'], 0, 1, 'L');
+                $pdf->Cell(0, 10, 'Status: ' . $row['status'], 0, 1, 'L');
                 // ... Adicione outras informações conforme necessário
 
                 // Saída do PDF
